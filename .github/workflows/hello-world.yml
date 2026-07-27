@@ -1,6 +1,6 @@
 name: Hello world
 on: 
-  workflow_dispatch
+  workflow_dispatch:
 jobs:
   # the id of the name
   hello-world-job:
@@ -13,3 +13,9 @@ jobs:
       # Runs a single command using the runner shell
       - name: Run a one-line script
         run: echo hello world
+  A:
+    needs: hello-world-job
+    runs-on: ubuntu-latest
+  B:
+    needs: hello-world-job
+    runs-on: ubuntu-latest
