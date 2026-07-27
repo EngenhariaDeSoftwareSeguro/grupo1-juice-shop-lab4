@@ -2,7 +2,9 @@ name: "CodeQL Scan"
 
 on:
   workflow_dispatch:
-  
+  push:
+    branches: [ main ]
+    
 jobs:
   analyze:
     name: Analyze
