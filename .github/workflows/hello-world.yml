@@ -16,6 +16,14 @@ jobs:
   A:
     needs: hello-world-job
     runs-on: ubuntu-latest
+    steps:
+      # Runs a single command using the runner shell
+      - name: Run a one-line script
+        run: echo job A
   B:
     needs: hello-world-job
     runs-on: ubuntu-latest
+    steps:
+      # Runs a single command using the runner shell
+      - name: Run a one-line script
+        run: echo job B
